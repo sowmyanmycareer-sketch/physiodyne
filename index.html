@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhysioDyne — Spine & Sports Physio Clinic</title>
+  <meta name="description" content="PhysioDyne Spine & Sports Physio Clinic — Expert physiotherapy, rated 5.0 by 30+ patients." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CDN Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- 3D Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <span class="close-menu">✕</span>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">
+      <div class="logo-icon">🦴</div>
+      <div>
+        <div class="logo-text">PhysioDyne</div>
+        <span class="logo-sub">Spine &amp; Sports Physio</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Book Now</a>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Now Accepting New Patients
+      </div>
+      <h1 class="hero-title">
+        Restore Motion.<br />
+        <span class="gradient-text">Rebuild Strength.</span><br />
+        Reclaim Life.
+      </h1>
+      <p class="hero-sub">
+        Expert physiotherapy for spine conditions and sports injuries. Personalized treatment plans backed by science and delivered with care.
+      </p>
+      <div class="hero-stars">
+        <span class="stars">★★★★★</span>
+        <span>5.0 Rating · 30+ Happy Patients</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">📅 Book Appointment</a>
+        <a href="#services" class="btn-outline">Explore Services</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <span class="arrow">↓</span>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num" data-count="30" data-suffix="+">0</div>
+        <div class="stat-label">Happy Patients</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" data-count="5" data-suffix=".0">0</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" data-count="8" data-suffix="+">0</div>
+        <div class="stat-label">Specializations</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" data-count="100" data-suffix="%">0</div>
+        <div class="stat-label">Personalized Care</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-card-3d">
+          <div class="about-icon">🏥</div>
+          <h3>PhysioDyne Clinic</h3>
+          <p>Advanced physiotherapy for spine & sports rehabilitation</p>
+        </div>
+        <div class="badge-float b1">⭐ 5.0 Rating</div>
+        <div class="badge-float b2">✅ 30+ Recoveries</div>
+      </div>
+      <div class="about-content">
+        <span class="section-label fade-up">About Us</span>
+        <h2 class="section-title fade-up">Your Trusted Partner in <span style="color:var(--primary)">Recovery</span></h2>
+        <div class="divider fade-up"></div>
+        <p class="section-sub fade-up">
+          PhysioDyne is a premier physiotherapy centre specialising in spine health and sports injury rehabilitation. Our evidence-based approach ensures every patient receives a tailored treatment plan for a faster, lasting recovery.
+        </p>
+        <ul class="features-list">
+          <li class="fade-up"><span class="icon">🔬</span> Evidence-based treatment protocols</li>
+          <li class="fade-up"><span class="icon">🧬</span> Advanced spine rehabilitation</li>
+          <li class="fade-up"><span class="icon">🏃</span> Sports injury specialists</li>
+          <li class="fade-up"><span class="icon">💡</span> Personalised recovery plans</li>
+          <li class="fade-up"><span class="icon">📱</span> Home exercise programmes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-header">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Our <span style="color:var(--primary)">Specialisations</span></h2>
+      <p class="section-sub">Comprehensive physiotherapy services designed to get you moving better, faster.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">🦴</span>
+        <h3>Spine Rehabilitation</h3>
+        <p>Expert treatment for back pain, disc herniation, sciatica, and postural issues using advanced manual therapy and exercises.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">⚽</span>
+        <h3>Sports Injury Recovery</h3>
+        <p>Rapid return-to-sport programmes for ligament tears, muscle strains, tendinopathies, and overuse injuries.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🤲</span>
+        <h3>Manual Therapy</h3>
+        <p>Hands-on mobilisation and manipulation techniques to restore joint mobility and reduce pain effectively.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">💪</span>
+        <h3>Strength & Conditioning</h3>
+        <p>Targeted exercise programmes to rebuild muscle strength, improve endurance, and prevent re-injury.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">⚡</span>
+        <h3>Electrotherapy</h3>
+        <p>TENS, ultrasound, and IFT modalities to accelerate tissue healing and manage acute and chronic pain.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🧘</span>
+        <h3>Posture & Ergonomics</h3>
+        <p>Assessment and correction of postural imbalances with workplace ergonomic advice for long-term spinal health.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="reviews-header">
+      <span class="section-label">Patient Stories</span>
+      <h2 class="section-title">What Our <span style="color:var(--primary)">Patients Say</span></h2>
+      <div class="rating-summary">
+        <div class="big-rating">5.0</div>
+        <div class="rating-details">
+          <div class="stars">★★★★★</div>
+          <div class="count">Based on 30 Google Reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="avatar">R</div>
+          <div>
+            <div class="reviewer-name">Rahul Sharma</div>
+            <div class="review-date">2 weeks ago</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Exceptional care! My chronic back pain of 3 years is completely gone after just 8 sessions. The therapist was thorough and explained every step of my treatment. Highly recommend!</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="avatar">P</div>
+          <div>
+            <div class="reviewer-name">Priya Nair</div>
+            <div class="review-date">1 month ago</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Recovered from a sports knee injury in record time. The personalised programme and constant follow-up made all the difference. Back on the field stronger than before!</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="avatar">A</div>
+          <div>
+            <div class="reviewer-name">Arjun Mehta</div>
+            <div class="review-date">3 weeks ago</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Professional, knowledgeable, and genuinely caring staff. The clinic is clean and well-equipped. My sciatica pain reduced by 90% within a month. Life-changing experience!</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="avatar">S</div>
+          <div>
+            <div class="reviewer-name">Sneha Kulkarni</div>
+            <div class="review-date">1 month ago</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Best physiotherapy clinic I have visited. They took time to understand my condition completely before starting treatment. The results speak for themselves — pain-free at last!</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="avatar">V</div>
+          <div>
+            <div class="reviewer-name">Vikram Joshi</div>
+            <div class="review-date">2 months ago</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">After my shoulder surgery, I was worried about recovery. PhysioDyne's team guided me through every phase. I regained full range of motion faster than expected. Outstanding!</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="avatar">D</div>
+          <div>
+            <div class="reviewer-name">Deepa Reddy</div>
+            <div class="review-date">3 months ago</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Wonderful clinic with a warm atmosphere. My posture issues and neck pain are completely resolved. The home exercise guidance was very practical and easy to follow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-grid">
+      <div>
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Book Your <span style="color:var(--primary)">Appointment</span></h2>
+        <div class="divider"></div>
+        <p class="section-sub" style="margin-bottom:40px">
+          Take the first step towards a pain-free life. Our team is ready to create a personalised treatment plan just for you.
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="c-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>PhysioDyne Spine &amp; Sports Physio Clinic<br />Your City, India</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <p>+91 XXXXX XXXXX<br />Mon–Sat: 9am – 7pm</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@physiodyne.in<br />We reply within 24 hours</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">⭐</div>
+            <div>
+              <h4>Google Rating</h4>
+              <p>5.0 / 5.0 — Rated by 30+ patients</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Doe" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX" required />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select required>
+            <option value="" disabled selected>Select a service</option>
+            <option>Spine Rehabilitation</option>
+            <option>Sports Injury Recovery</option>
+            <option>Manual Therapy</option>
+            <option>Strength & Conditioning</option>
+            <option>Electrotherapy</option>
+            <option>Posture & Ergonomics</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message / Symptoms</label>
+          <textarea placeholder="Briefly describe your condition or symptoms..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center">Book Appointment</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Physio<span>Dyne</span></div>
+    <p class="footer-tagline">Spine &amp; Sports Physio Clinic · Rated 5.0 ⭐</p>
+    <div class="footer-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="footer-copy">© 2026 PhysioDyne. All rights reserved. Built with ❤️ for better health.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
