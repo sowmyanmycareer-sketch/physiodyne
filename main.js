@@ -144,15 +144,16 @@ gsap.from('.scroll-indicator', { opacity: 0, duration: 0.6, delay: 1.5 });
 
 // Stats
 gsap.from('.stat-card', {
-  scrollTrigger: { trigger: '#stats', start: 'top 80%' },
-  opacity: 0, y: 50, stagger: 0.15, duration: 0.8
+  scrollTrigger: { trigger: '#stats', start: 'top 95%' },
+  immediateRender: false,
+  opacity: 0, y: 30, stagger: 0.12, duration: 0.7
 });
 
 // Counters
 document.querySelectorAll('.stat-num[data-count]').forEach(el => {
   const target = +el.dataset.count;
   ScrollTrigger.create({
-    trigger: el, start: 'top 85%', once: true,
+    trigger: el, start: 'top 95%', once: true,
     onEnter: () => {
       gsap.to({ val: 0 }, {
         val: target, duration: 2, ease: 'power2.out',
@@ -164,34 +165,40 @@ document.querySelectorAll('.stat-num[data-count]').forEach(el => {
 
 // About
 gsap.from('.about-content .fade-up', {
-  scrollTrigger: { trigger: '#about', start: 'top 75%' },
-  opacity: 0, y: 40, stagger: 0.2, duration: 0.8
+  scrollTrigger: { trigger: '#about', start: 'top 95%' },
+  immediateRender: false,
+  opacity: 0, y: 30, stagger: 0.15, duration: 0.7
 });
 gsap.from('.about-card-3d', {
-  scrollTrigger: { trigger: '#about', start: 'top 75%' },
-  opacity: 0, x: 60, duration: 1, ease: 'power3.out'
+  scrollTrigger: { trigger: '#about', start: 'top 95%' },
+  immediateRender: false,
+  opacity: 0, x: 40, duration: 0.9, ease: 'power3.out'
 });
 
 // Services
 gsap.from('.service-card', {
-  scrollTrigger: { trigger: '#services', start: 'top 80%' },
-  opacity: 0, y: 60, stagger: 0.12, duration: 0.8
+  scrollTrigger: { trigger: '#services', start: 'top 95%' },
+  immediateRender: false,
+  opacity: 0, y: 40, stagger: 0.1, duration: 0.7
 });
 
 // Reviews
 gsap.from('.review-card', {
-  scrollTrigger: { trigger: '#reviews', start: 'top 80%' },
-  opacity: 0, scale: 0.92, stagger: 0.1, duration: 0.7
+  scrollTrigger: { trigger: '#reviews', start: 'top 95%' },
+  immediateRender: false,
+  opacity: 0, scale: 0.95, stagger: 0.08, duration: 0.6
 });
 
 // Contact
 gsap.from('.contact-item', {
-  scrollTrigger: { trigger: '#contact', start: 'top 80%' },
-  opacity: 0, x: -30, stagger: 0.15, duration: 0.8
+  scrollTrigger: { trigger: '#contact', start: 'top 95%' },
+  immediateRender: false,
+  opacity: 0, x: -20, stagger: 0.12, duration: 0.7
 });
 gsap.from('.contact-form .form-group', {
-  scrollTrigger: { trigger: '#contact', start: 'top 80%' },
-  opacity: 0, x: 30, stagger: 0.1, duration: 0.7
+  scrollTrigger: { trigger: '#contact', start: 'top 95%' },
+  immediateRender: false,
+  opacity: 0, x: 20, stagger: 0.08, duration: 0.6
 });
 
 // ===== FORM SUBMIT =====

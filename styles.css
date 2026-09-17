@@ -108,7 +108,7 @@ nav.scrolled { padding: 12px 60px; background: rgba(1,1,32,0.92); }
 /* ===== HERO ===== */
 #hero {
   position: relative; z-index: 1;
-  min-height: 100vh;
+  min-height: auto;
   display: flex; align-items: center; justify-content: center;
   text-align: center; padding: 120px 20px 60px;
 }
@@ -168,7 +168,7 @@ nav.scrolled { padding: 12px 60px; background: rgba(1,1,32,0.92); }
 @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
 
 /* ===== SECTIONS COMMON ===== */
-section { position: relative; z-index: 1; padding: 100px 60px; }
+section { position: relative; z-index: 1; padding: 60px 60px; }
 .section-label {
   display: inline-block; font-size: 0.8rem; font-weight: 600;
   color: var(--primary); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px;
@@ -338,7 +338,7 @@ footer {
 .footer-copy { color: rgba(255,255,255,0.3); font-size: 0.8rem; }
 
 /* ===== GSAP INIT STATES ===== */
-.fade-up { opacity: 0; transform: translateY(40px); }
+.fade-up { opacity: 1; transform: none; }
 
 /* ===== MOBILE NAV ===== */
 .mobile-menu {
@@ -352,7 +352,7 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-  section { padding: 80px 40px; }
+  section { padding: 50px 40px; }
   nav { padding: 16px 40px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
@@ -364,7 +364,7 @@ footer {
   nav.scrolled { padding: 10px 24px; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
-  section { padding: 70px 24px; }
+  section { padding: 40px 24px; }
   #stats { padding: 40px 24px; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 50px; }
   .services-grid { grid-template-columns: 1fr; }
